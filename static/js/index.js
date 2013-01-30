@@ -11,7 +11,7 @@ $(function() {
                     return;
                 }
                 $.ajax({
-                    url : '/ajax/save',
+                    url : '/ajax/save?rn=' + Math.random(),
                     type : 'get',
                     dataType : 'json',
                     data : {domain:domain, ip:ip_str},
@@ -37,7 +37,7 @@ $(function() {
             var domain = $(this).parent().children()[0].innerHTML;
             if( confirm("确认要删除域名："+domain+" ?") ) {
                 $.ajax({
-                    url : '/ajax/delete',
+                    url : '/ajax/delete?rn=' + Math.random(),
                     type : 'get',
                     dataType : 'json',
                     data : {domain:domain},
@@ -54,7 +54,7 @@ $(function() {
             var ip = $(this).parent().find('.newip').val();
             if(ip.length > 0){
                 $.ajax({
-                    url : '/ajax/addip',
+                    url : '/ajax/addip?rn=' + Math.random(),
                     type : 'get',
                     dataType : 'json',
                     data : {domain:domain, ip:ip},
@@ -73,7 +73,7 @@ $(function() {
             var type = $(this).attr('settype');
             var ip = $(this).val();
             $.ajax({
-                url : '/ajax/setbind',
+                url : '/ajax/setbind?rn=' + Math.random(),
                 type : 'get',
                 dataType : 'json',
                 data : {domain:domain, ip:ip, type:type},
@@ -88,7 +88,7 @@ $(function() {
             var domain = $(this).parent().parent().attr('class');
             var ip = $(this).parent().text();
             $.ajax({
-                url : '/ajax/deleteip',
+                url : '/ajax/deleteip?rn=' + Math.random(),
                 type : 'get',
                 dataType : 'json',
                 data : {domain:domain, ip:ip},
@@ -192,7 +192,7 @@ $(function() {
         },
         init: function() {
             var that = this;
-            $.getJSON('/ajax/init',function(data) {
+            $.getJSON('/ajax/init?rn=' + Math.random(),function(data) {
                 that.config = data;
                 that._list(data);
             });
