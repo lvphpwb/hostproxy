@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Develop.Proxy 发生错误</title>
+        <link href="{PROXYHOST}bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="{PROXYHOST}bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+        <script src="{PROXYHOST}js/jquery-1.7.1.min.js"></script>
+        <script src="{PROXYHOST}bootstrap/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <a class="brand">代理模式 HOST设置</a>
+                <ul class="nav">
+                    <li><a href="{PROXYHOST}">首页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-unit">
+                <h3>抱歉，Develop.Proxy 在代理过程中发生错误：</h3>
+                <div class="alert alert-error">
+                    {error_message}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
