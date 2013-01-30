@@ -27,7 +27,7 @@ pservice.prototype.run = function(request, response) {
 	if( typeof(requesturl.port) == 'undefined' ){
 		requesturl.port = '80';
 	}
-    console.log(request.url);
+    //console.log(request.url);
     // 请求选项
     var options = {
         'method':  request.method,
